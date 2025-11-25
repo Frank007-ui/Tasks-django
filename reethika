@@ -1,0 +1,190 @@
+if else statemnts
+
+
+[ ]
+a=10
+b=20
+if a<b:
+  print("b is greater")
+else:
+  print("a is greater")
+b is greater
+
+
+
+Tuples
+
+
+[ ]
+t=(1,2,3,4)
+print(t)
+print(type(t))
+(1, 2, 3, 4)
+<class 'tuple'>
+
+
+variable
+
+
+[ ]
+a=89
+b="python"
+print(a,b)
+print(type(a))
+print(type(b))
+89 python
+<class 'int'>
+<class 'str'>
+
+
+palindrome
+
+
+[ ]
+s="12321"
+if s == s[::-1]:
+    print(s, "is a palindrome")
+else:
+    print(s, "is not a palindrome")
+12321 is a palindrome
+
+
+sort function
+
+
+[ ]
+l = [5, 2, 8, 1, 9]
+l.sort()
+print(l)
+[1, 2, 5, 8, 9]
+
+
+CRUD operaations
+
+
+[1]
+1m
+data = {}
+
+def create():
+    
+    name = input("Enter name: ")
+    age = input("Enter age: ")
+    data[name] = age
+    print("Record created successfully!")
+
+def read():
+    
+    name = input("Enter name: ")
+    if name in data:
+        print("Age:", data[name])
+    else:
+        print("Record not found!")
+
+def update():
+    
+    name = input("Enter name: ")
+    if name in data:
+        age = input("Enter new age: ")
+        data[name] = age
+        print("Record updated successfully!")
+    else:
+        print("Record not found!")
+
+def delete():
+   
+    name = input("Enter name: ")
+    if name in data:
+        del data[name]
+        print("Record deleted successfully!")
+    else:
+        print("Record not found!")
+
+def display():
+ 
+    print("Records:")
+    for name, age in data.items():
+        print(f"Name: {name}, Age: {age}")
+
+while True:
+    print("\n1. Create")
+    print("2. Read")
+    print("3. Update")
+    print("4. Delete")
+    print("5. Display")
+    print("6. Exit")
+    
+    choice = input("Enter your choice: ")
+    
+    if choice == "1":
+        create()
+    elif choice == "2":
+        read()
+    elif choice == "3":
+        update()
+    elif choice == "4":
+        delete()
+    elif choice == "5":
+        display()
+    elif choice == "6":
+        break
+    else:
+        print("Invalid choice!")
+
+1. Create
+2. Read
+3. Update
+4. Delete
+5. Display
+6. Exit
+Enter your choice: 1
+Enter name: reethika
+Enter age: 23
+Record created successfully!
+
+1. Create
+2. Read
+3. Update
+4. Delete
+5. Display
+6. Exit
+Enter your choice: 2
+Enter name: reethika
+Age: 23
+
+1. Create
+2. Read
+3. Update
+4. Delete
+5. Display
+6. Exit
+Enter your choice: 3
+Enter name: sravya
+Record not found!
+
+1. Create
+2. Read
+3. Update
+4. Delete
+5. Display
+6. Exit
+Enter your choice: 4
+Enter name: reethika
+Record deleted successfully!
+
+1. Create
+2. Read
+3. Update
+4. Delete
+5. Display
+6. Exit
+Enter your choice: 5
+Records:
+
+1. Create
+2. Read
+3. Update
+4. Delete
+5. Display
+6. Exit
+Enter your choice: sravya
